@@ -1,9 +1,25 @@
 import logo from "../assets/Images/navbar-logo.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+const containerVariants = {
+  hidden: {
+    y: -250,
+  },
+  visible: {
+    y: 0,
+    transition: { delay: 0.2, type: "spring", stiffness: 100 },
+  },
+};
 const NavBar = () => {
   return (
-    <Wrapper className="container">
+    <Wrapper
+      className="container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      transition="animationTrans"
+    >
       <img src={logo} alt="logo" className="img" />
       <ul>
         <li>
@@ -23,7 +39,7 @@ const NavBar = () => {
   );
 };
 export default NavBar;
-const Wrapper = styled.nav`
+const Wrapper = styled(motion.nav)`
   img {
     cursor: pointer;
     width: 125px;
