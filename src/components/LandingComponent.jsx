@@ -3,7 +3,7 @@ import LandingBtn from "./LandingBtn";
 import landingImage from "../assets/Images/landing-image.jpg";
 const LandingComponent = ({ text, img, btn, addText }) => {
   return (
-    <div className="container">
+    <div>
       <Wrapper style={{ backgroundImage: `url(${img})` }}>
         <div className="content">
           {text ? (
@@ -23,15 +23,13 @@ const LandingComponent = ({ text, img, btn, addText }) => {
 };
 export default LandingComponent;
 const Wrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translate(-50%, -50%);
   height: 100vh;
   width: 100vw;
+  position: relative;
+  top: 0;
   color: white;
   background-size: cover;
   h1 {

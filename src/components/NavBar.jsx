@@ -2,6 +2,7 @@ import logo from "../assets/Images/navbar-logo.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { navItems } from "../data";
 const containerVariants = {
   hidden: {
     y: -250,
@@ -22,22 +23,21 @@ const NavBar = () => {
     >
       <img src={logo} alt="logo" className="img" />
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About Us</Link>
-        </li>
-        <li>
-          <Link to="/teams">Teams</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
+        {navItems.map((item, i) => {
+          const { name, link } = item;
+          return (
+            <li key={i}>
+              <Link to={link} key={i}>
+                {name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </Wrapper>
   );
 };
+
 export default NavBar;
 const Wrapper = styled(motion.nav)`
   img {
@@ -45,11 +45,12 @@ const Wrapper = styled(motion.nav)`
     width: 125px;
   }
   z-index: 9999;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 7.5%;
   height: 72px;
-  justify-content: center;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   ul {
     display: flex;

@@ -71,3 +71,17 @@ img {
   border: none;
   scale: 1.2;
 }
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-center {
+  display: flex;
+  justify-content: space-between;
+}
+.red {
+  color: #ef3d2c;
+}
+.gray-bg {
+  background-color: rgba(0, 0, 0, 0.1);
+}
