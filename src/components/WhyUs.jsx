@@ -25,7 +25,8 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
   color: white;
-  background-image: url(${image});
+  /* background-image: url(${image}); */
+  background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
   width: 100%;
 
   .info {
@@ -34,11 +35,11 @@ const Wrapper = styled.section`
     justify-content: center;
     align-content: center;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     .info {
       padding-left: 0px;
       justify-content: space-around;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
   }
 `;

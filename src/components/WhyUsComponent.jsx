@@ -21,6 +21,13 @@ const Wrapper = styled.div`
     width: fit-content;
   }
   @media (max-width: 700px) {
-    width: 200px;
+    width: 150px;
+    h1 {
+      font-size: 38px;
+    }
+
+    p {
+      width: 100%;
+    }
   }
 `;

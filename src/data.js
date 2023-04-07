@@ -49,3 +49,15 @@ export const whyUsInfo = [
   { number: "20,000+", text: "Direct Impact" },
   { number: "500,000+", text: "Indirect Impact" },
 ];
+export const customers = [
+  { link: "https://i.imgur.com/46HVgK2.png" },
+  { link: "https://i.imgur.com/WBXvDJn.png" },
+  { link: "https://i.imgur.com/3DgnbqL.png" },
+  { link: "https://i.imgur.com/t3oJhnS.png" },
+  { link: "https://i.imgur.com/PlxeERi.png" },
+  { link: "https://i.imgur.com/46HVgK2.png" },
+  { link: "https://i.imgur.com/WBXvDJn.png" },
+  { link: "https://i.imgur.com/3DgnbqL.png" },
+  { link: "https://i.imgur.com/t3oJhnS.png" },
+  { link: "https://i.imgur.com/PlxeERi.png" },
+];
