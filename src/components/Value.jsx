@@ -11,7 +11,7 @@ const Value = ({ title, text, img }) => {
 };
 export default Value;
 const Wrapper = styled.div`
-  width: 20%;
+  margin-top: 40px;
   display: grid;
   align-items: center;
   justify-content: center;

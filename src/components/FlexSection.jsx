@@ -32,16 +32,29 @@ const FlexSection = () => {
 };
 export default FlexSection;
 const Wrapper = styled.section`
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
+    justify-content: center;
+  }
   .box {
-    width: 50%;
-    h1 {
-      font-size: 50px;
-      font-weight: 600;
-    }
+    text-align: center;
     p {
-      line-height: 1.6;
-      width: 80%;
-      font-size: 17px;
+      text-align: center;
+      margin: auto;
     }
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  p {
+    line-height: 1.6;
+    width: 80%;
+    font-size: 17px;
+  }
+
+  @media (min-width: 800px) {
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { landingSectionTexts } from "../data";
 const Section = () => {
   return (
-    <Wrapper className="container section section-center">
+    <Wrapper className="container section ">
       <h1>
         About <br />
         <span className="red">VIA Club</span>
@@ -13,8 +13,13 @@ const Section = () => {
 };
 export default Section;
 const Wrapper = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+
   p {
-    width: 40%;
+    width: 80%;
     line-height: 2;
   }
   h1 {
@@ -30,9 +35,18 @@ const Wrapper = styled.section`
     position: absolute;
     width: 4px;
     height: 180%;
-
     background-color: #ef3d2c;
     top: -40px;
-    right: 140px;
+    right: 0px;
+  }
+  @media (max-width: 1200px) {
+    h1,
+    p {
+      width: 100%;
+      text-align: center;
+    }
+    h1::before {
+      display: none;
+    }
   }
 `;

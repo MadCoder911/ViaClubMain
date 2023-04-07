@@ -24,9 +24,9 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-top: 90px;
   }
 `;

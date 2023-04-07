@@ -78,6 +78,7 @@ img {
 .section-center {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .red {
   color: #ef3d2c;
