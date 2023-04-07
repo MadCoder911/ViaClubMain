@@ -1,16 +1,14 @@
-import { useSwiper } from "swiper/react";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import styled from "styled-components";
 const SwiperNavBtns = () => {
-  const swiper = useSwiper();
   return (
     <Wrapper>
-      <button className="left-btn">
-        <BsChevronLeft onClick={() => swiper.slidePrev()} />
+      {/* <button className="left-btn">
+        <BsChevronLeft onClick={() => handlePrev()} />
       </button>
       <button className="right-btn">
-        <BsChevronRight onClick={() => swiper.slideNext()} />
-      </button>
+        <BsChevronRight onClick={() => handleNext()} />
+      </button> */}
     </Wrapper>
   );
 };

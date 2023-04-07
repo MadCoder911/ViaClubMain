@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { customers } from "../data";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
-import SwiperNavBtns from "../components/SwiperNavBtns";
-import "swiper/css";
+
 import { useState } from "react";
 
 const winWidth = window.innerWidth;
@@ -16,23 +13,6 @@ const HappyCustomers = () => {
       <h1>
         Happy <span className="red">Customers</span>
       </h1>
-
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={20}
-        slidesPerView={width < 1000 ? "3" : "4"}
-        pagination={{ clickable: true }}
-        navigation
-      >
-        {customers.map((customer, i) => {
-          return (
-            <SwiperSlide key={i}>
-              <img src={customer.link} alt="customer" />
-            </SwiperSlide>
-          );
-        })}
-        <SwiperNavBtns />
-      </Swiper>
     </Wrapper>
   );
 };
