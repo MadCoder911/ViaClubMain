@@ -19,8 +19,8 @@ const HappyCustomers = () => {
 
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={0}
-        slidesPerView={width < 1000 ? "2" : "4"}
+        spaceBetween={20}
+        slidesPerView={width < 1000 ? "3" : "4"}
         pagination={{ clickable: true }}
         navigation
       >
