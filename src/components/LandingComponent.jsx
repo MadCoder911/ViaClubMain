@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+
   position: relative;
   top: 0;
   color: white;
@@ -52,5 +52,10 @@ const Wrapper = styled.div`
     top: -10px;
     padding: 0;
     margin: 0;
+  }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 45px;
+    }
   }
 `;

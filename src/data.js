@@ -38,3 +38,14 @@ export const ValuesSectionData = [
     img: "https://i.imgur.com/KAekUY5.png",
   },
 ];
+export const whyUsInfo = [
+  { number: "8+", text: "Years Of Experience" },
+  { number: "300+", text: "Internships Opportunity" },
+  { number: "15,000+", text: "Students Empowered" },
+  { number: "7500+", text: "EXCELLENCE attendees" },
+  { number: "40,000+", text: "Followers" },
+  { number: "50+", text: "Partners" },
+  { number: "8+", text: "Programs Done" },
+  { number: "20,000+", text: "Direct Impact" },
+  { number: "500,000+", text: "Indirect Impact" },
+];

@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import image from "../assets/Images/whyUsBg.svg";
+import { whyUsInfo } from "../data";
+import WhyUsComponent from "./WhyUsComponent";
+
 const WhyUs = () => {
   return (
     <div className="why-us">
       <Wrapper className="container section">
         <h1>Why Choose Us?</h1>
+        <div className="info">
+          {whyUsInfo.map((info, id) => {
+            return <WhyUsComponent key={id} {...info} />;
+          })}
+        </div>
       </Wrapper>
     </div>
   );
@@ -19,5 +27,18 @@ const Wrapper = styled.section`
   color: white;
   background-image: url(${image});
   width: 100%;
-  height: 70vh;
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  @media (max-width: 700px) {
+    .info {
+      padding-left: 0px;
+      justify-content: space-around;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
 `;

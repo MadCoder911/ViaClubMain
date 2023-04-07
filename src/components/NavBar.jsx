@@ -68,4 +68,7 @@ const Wrapper = styled(motion.nav)`
       color: white;
     }
   }
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;

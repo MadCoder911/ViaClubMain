@@ -13,7 +13,7 @@ const Section = () => {
 };
 export default Section;
 const Wrapper = styled.section`
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   justify-content: space-between;
   align-items: center;
@@ -37,9 +37,10 @@ const Wrapper = styled.section`
     height: 180%;
     background-color: #ef3d2c;
     top: -40px;
-    right: 0px;
+    right: 80px;
   }
   @media (max-width: 1200px) {
+    flex-direction: column;
     h1,
     p {
       width: 100%;
