@@ -11,7 +11,7 @@ export default WhyUsComponent;
 const Wrapper = styled.div`
   margin-top: 70px;
   position: relative;
-  width: 250px;
+  width: 220px;
   p {
     text-align: left;
   }

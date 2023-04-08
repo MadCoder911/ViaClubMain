@@ -86,3 +86,7 @@ img {
 .gray-bg {
   background-color: #f4f4f4;
 }
+.why-us {
+  background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
+  width: 100%;
+}

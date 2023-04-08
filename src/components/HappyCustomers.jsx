@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { customers } from "../data";
 import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import SingleHappyCustomer from "./SingleHappyCustomer";
 
 const winWidth = window.innerWidth;
 const settings = {
@@ -17,6 +19,45 @@ const HappyCustomers = () => {
       <h1>
         Happy <span className="red">Customers</span>
       </h1>
+      <div className="carousel">
+        <Carousel indicators={false} controls={true} variant="dark">
+          <Carousel.Item interval={1500}>
+            <img
+              className="d-block m-auto "
+              src="https://i.imgur.com/46HVgK2.png"
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className="d-block m-auto"
+              src="https://i.imgur.com/WBXvDJn.png"
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className="d-block m-auto"
+              src="https://i.imgur.com/3DgnbqL.png"
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className="d-block m-auto"
+              src="https://i.imgur.com/t3oJhnS.png"
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={1500}>
+            <img
+              className="d-block m-auto"
+              src="https://i.imgur.com/PlxeERi.png"
+              alt="First slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </Wrapper>
   );
 };
@@ -32,5 +73,9 @@ const Wrapper = styled.section`
   }
   .swiper {
     width: 90%;
+  }
+  .carousel {
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 `;

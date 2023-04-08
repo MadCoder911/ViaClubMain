@@ -26,8 +26,6 @@ const Wrapper = styled.section`
   }
   color: white;
   /* background-image: url(${image}); */
-  background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
-  width: 100%;
 
   .info {
     display: flex;

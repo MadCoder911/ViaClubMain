@@ -1,16 +1,6 @@
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import styled from "styled-components";
 const SwiperNavBtns = () => {
-  return (
-    <Wrapper>
-      {/* <button className="left-btn">
-        <BsChevronLeft onClick={() => handlePrev()} />
-      </button>
-      <button className="right-btn">
-        <BsChevronRight onClick={() => handleNext()} />
-      </button> */}
-    </Wrapper>
-  );
+  return <Wrapper></Wrapper>;
 };
 export default SwiperNavBtns;
 
