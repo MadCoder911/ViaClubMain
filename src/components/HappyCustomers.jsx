@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { customers } from "../data";
-// Import Swiper React components
-
 import { useState } from "react";
 
 const winWidth = window.innerWidth;
-
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+};
 const HappyCustomers = () => {
   const [width, setWidth] = useState(winWidth);
   return (
