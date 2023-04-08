@@ -88,5 +88,13 @@ img {
 }
 .why-us {
   background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
+}
+.gray {
+  color: #878787;
+}
+.red-bar {
+  background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
   width: 100%;
+  height: 15px;
+  z-index: 999;
 }

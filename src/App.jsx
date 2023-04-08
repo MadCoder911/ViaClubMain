@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Teams from "./pages/Teams";
+import Footer from "./components/Footer";
 function App() {
   // return <Landing />;
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/teams" element={<Teams />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

@@ -23,13 +23,15 @@ const HappyCustomers = () => {
         <Carousel indicators={false} controls={true} variant="dark">
           <Carousel.Item interval={1500}>
             <img
-              className="d-block m-auto "
+              style={{ height: "80px" }}
+              className="d-block m-auto"
               src="https://i.imgur.com/46HVgK2.png"
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item interval={1500}>
             <img
+              style={{ height: "80px" }}
               className="d-block m-auto"
               src="https://i.imgur.com/WBXvDJn.png"
               alt="First slide"
@@ -37,6 +39,7 @@ const HappyCustomers = () => {
           </Carousel.Item>
           <Carousel.Item interval={1500}>
             <img
+              style={{ height: "80px" }}
               className="d-block m-auto"
               src="https://i.imgur.com/3DgnbqL.png"
               alt="First slide"
@@ -44,6 +47,7 @@ const HappyCustomers = () => {
           </Carousel.Item>
           <Carousel.Item interval={1500}>
             <img
+              style={{ height: "80px" }}
               className="d-block m-auto"
               src="https://i.imgur.com/t3oJhnS.png"
               alt="First slide"
@@ -51,6 +55,7 @@ const HappyCustomers = () => {
           </Carousel.Item>
           <Carousel.Item interval={1500}>
             <img
+              style={{ height: "80px" }}
               className="d-block m-auto"
               src="https://i.imgur.com/PlxeERi.png"
               alt="First slide"
