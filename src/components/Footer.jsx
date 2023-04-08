@@ -113,6 +113,8 @@ const Wrapper = styled.footer`
       }
       button {
         border: none;
+        background-color: transparent;
+        color: black;
       }
     }
   }
