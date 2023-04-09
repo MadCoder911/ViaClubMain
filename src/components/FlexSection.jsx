@@ -40,6 +40,7 @@ const Wrapper = styled.section`
   }
   .box {
     text-align: center;
+    height: 300px;
     p {
       text-align: center;
       margin: auto;

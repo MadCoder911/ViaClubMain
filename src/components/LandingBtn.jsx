@@ -7,4 +7,5 @@ const Wrapper = styled.button`
   margin: auto;
   position: relative;
   top: -170px;
+  border-radius: 0;
 `;

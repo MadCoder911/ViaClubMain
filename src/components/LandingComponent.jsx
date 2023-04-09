@@ -35,6 +35,7 @@ const Wrapper = styled.div`
   h1 {
     text-align: center;
     font-size: 60px;
+    font-weight: bolder;
   }
   .content {
     display: flex;
