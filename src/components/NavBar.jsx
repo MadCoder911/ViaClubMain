@@ -68,7 +68,7 @@ const Wrapper = styled(motion.nav)`
       color: white;
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;

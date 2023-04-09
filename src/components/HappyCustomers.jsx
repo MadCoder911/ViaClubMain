@@ -4,13 +4,7 @@ import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 const winWidth = window.innerWidth;
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-};
+
 const HappyCustomers = () => {
   const [width, setWidth] = useState(winWidth);
   return (
