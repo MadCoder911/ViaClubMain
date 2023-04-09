@@ -9,7 +9,6 @@ const WhyUsComponent = ({ number, text }) => {
 };
 export default WhyUsComponent;
 const Wrapper = styled.div`
-  width: 200px;
   margin-top: 70px;
   position: relative;
   width: 220px;
@@ -23,6 +22,7 @@ const Wrapper = styled.div`
     width: fit-content;
   }
   @media screen and (max-width: 1000px) {
+    width: 175px;
     .title {
       font-size: 28px;
     }
