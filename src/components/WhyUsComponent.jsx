@@ -9,6 +9,7 @@ const WhyUsComponent = ({ number, text }) => {
 };
 export default WhyUsComponent;
 const Wrapper = styled.div`
+  width: 200px;
   margin-top: 70px;
   position: relative;
   width: 220px;
