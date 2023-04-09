@@ -2,7 +2,7 @@ import styled from "styled-components";
 const WhyUsComponent = ({ number, text }) => {
   return (
     <Wrapper>
-      <h1>{number}</h1>
+      <h1 className="title">{number}</h1>
       <p>{text}</p>
     </Wrapper>
   );
@@ -15,14 +15,14 @@ const Wrapper = styled.div`
   p {
     text-align: left;
   }
-  h1 {
+  .title {
+    font-size: 45px;
     margin: 0;
     text-align: left;
     width: fit-content;
   }
-  @media (max-width: 700px) {
-    width: 150px;
-    h1 {
+  @media screen and (max-width: 1000px) {
+    .title {
       font-size: 28px;
     }
 

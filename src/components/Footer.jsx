@@ -13,21 +13,22 @@ const Footer = () => {
   const handleClick = (platform) => {
     let url = "via.com";
     if (platform === "linkedin") {
-      url = "linkedin.com";
+      url = "https://www.linkedin.com/company/via-club-cu/";
     }
-    if (platform === "linkediinstagram") {
-      url = "instagram.com";
+    if (platform === "instagram") {
+      url = "https://www.instagram.com/via.club/?hl=en";
     }
     if (platform === "facebook") {
-      url = "facebook.com";
+      url = "https://www.facebook.com/VIAStudentsClub/";
     }
     if (platform === "tiktok") {
-      url = "tiktok.com";
+      url =
+        "https://www.tiktok.com/@via.club?is_from_webapp=1&sender_device=pc";
     }
     if (platform === "youtube") {
       url = "youtube.com";
     }
-    window.location.replace(`https://${url}`);
+    window.location.replace(url);
   };
   return (
     <div className="div gray-bg">
