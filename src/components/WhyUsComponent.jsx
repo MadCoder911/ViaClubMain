@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   @media (max-width: 700px) {
     width: 150px;
     h1 {
-      font-size: 38px;
+      font-size: 28px;
     }
 
     p {
