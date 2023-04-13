@@ -19,7 +19,7 @@ export const handleClick = (platform) => {
 };
 export const variantsCont = {
   offscreen: {
-    y: 600,
+    y: 200,
   },
   show: {
     y: 0,
