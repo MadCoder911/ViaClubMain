@@ -1,8 +1,16 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { landingSectionTexts } from "../data";
+import { variantsCont } from "../utils";
 const Section = () => {
   return (
-    <Wrapper className="container section ">
+    <Wrapper
+      variants={variantsCont}
+      initial="offscreen"
+      whileInView="show"
+      viewport={{ once: true, amount: 0 }}
+      className="container section "
+    >
       <h1>
         About <br />
         <span className="red">VIA Club</span>
@@ -12,7 +20,7 @@ const Section = () => {
   );
 };
 export default Section;
-const Wrapper = styled.section`
+const Wrapper = styled(motion.section)`
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   justify-content: space-between;

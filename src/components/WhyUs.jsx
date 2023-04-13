@@ -2,10 +2,18 @@ import styled from "styled-components";
 import image from "../assets/Images/whyUsBg.svg";
 import { whyUsInfo } from "../data";
 import WhyUsComponent from "./WhyUsComponent";
-
+import { motion } from "framer-motion";
+import { variantsCont } from "../utils";
+import { children } from "../utils";
 const WhyUs = () => {
   return (
-    <div className="why-us">
+    <motion.div
+      className="why-us"
+      variants={variantsCont}
+      initial="offscreen"
+      whileInView="show"
+      viewport={{ once: true, amount: 0 }}
+    >
       <Wrapper className="container section">
         <h1>Why Choose Us?</h1>
         <div className="info">
@@ -14,11 +22,11 @@ const WhyUs = () => {
           })}
         </div>
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
 export default WhyUs;
-const Wrapper = styled.section`
+const Wrapper = styled(motion.section)`
   h1 {
     text-align: center;
     font-size: 50px;

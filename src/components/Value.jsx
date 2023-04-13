@@ -1,8 +1,9 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
+import { children } from "../utils";
 const Value = ({ title, text, img }) => {
   return (
-    <Wrapper>
+    <Wrapper variants={children}>
       <img src={img} alt="image" />
       <h3 className="red">{title}</h3>
       <p>{text}</p>
@@ -10,7 +11,7 @@ const Value = ({ title, text, img }) => {
   );
 };
 export default Value;
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   margin-top: 40px;
   display: grid;
   align-items: center;

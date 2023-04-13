@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import { landingSectionTexts } from "../data";
 import { motion } from "framer-motion";
-
+import { variantsCont } from "../utils";
 const FlexSection = () => {
   return (
-    <Wrapper className=" gray-bg">
+    <Wrapper
+      variants={variantsCont}
+      initial="offscreen"
+      whileInView="show"
+      viewport={{ once: true, amount: 0 }}
+      className="gray-bg"
+    >
       <div className="container  section section-center">
         <div className="box">
           <h1>
@@ -31,7 +37,7 @@ const FlexSection = () => {
   );
 };
 export default FlexSection;
-const Wrapper = styled.section`
+const Wrapper = styled(motion.section)`
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

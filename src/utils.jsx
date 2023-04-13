@@ -17,3 +17,32 @@ export const handleClick = (platform) => {
   }
   window.location.replace(url);
 };
+export const variantsCont = {
+  offscreen: {
+    y: 600,
+  },
+  show: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.1,
+      duration: 0.5,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+  // onscreen: {
+  //   y: 0,
+  //   delayChildren: 0.5,
+  //   transition: {
+  //     type: "spring",
+  //     bounce: 0.4,
+  //     duration: 0.8,
+  //     delayChildren: 0.5,
+  //   },
+  // },
+};
+export const children = {
+  offscreen: { opacity: 0 },
+  show: { opacity: 1 },
+};

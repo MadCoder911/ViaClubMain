@@ -3,13 +3,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { navItems } from "../data";
+import { children } from "../utils";
 const containerVariants = {
   hidden: {
     y: -250,
   },
   visible: {
     y: 0,
-    transition: { delay: 0.2, type: "spring", stiffness: 100 },
+    transition: {
+      type: "spring",
+      delay: 0.2,
+      bounce: 0.3,
+      duration: 0.5,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
   },
 };
 const NavBar = () => {
@@ -26,11 +34,11 @@ const NavBar = () => {
         {navItems.map((item, i) => {
           const { name, link } = item;
           return (
-            <li key={i}>
+            <motion.li variants={children} key={i}>
               <Link to={link} key={i}>
                 {name}
               </Link>
-            </li>
+            </motion.li>
           );
         })}
       </ul>

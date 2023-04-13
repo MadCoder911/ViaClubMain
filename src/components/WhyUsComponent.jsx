@@ -1,14 +1,16 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { children } from "../utils";
 const WhyUsComponent = ({ number, text }) => {
   return (
-    <Wrapper>
+    <Wrapper variants={children}>
       <h1 className="title">{number}</h1>
       <p>{text}</p>
     </Wrapper>
   );
 };
 export default WhyUsComponent;
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   margin-top: 70px;
   position: relative;
   width: 220px;
