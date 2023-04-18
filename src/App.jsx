@@ -8,6 +8,8 @@ import ContactUs from "./pages/ContactUs";
 import Teams from "./pages/Teams";
 import Footer from "./components/Footer";
 import MobileNav from "./components/MobileNav";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   // return <Landing />;
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/teams" element={<Teams />} />
       </Routes>
       <Footer />
+      <ToastContainer position="top-center" autoClose={2000} />
     </Router>
   );
 }

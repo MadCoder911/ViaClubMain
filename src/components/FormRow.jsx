@@ -16,6 +16,7 @@ const FormRow = ({
         name={name}
         onChange={handleChange}
         placeholder={placeholder}
+        required
       />
     </Wrapper>
   );

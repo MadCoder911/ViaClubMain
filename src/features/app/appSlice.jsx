@@ -10,9 +10,27 @@ const initialState = {
   message: "",
   isLoading: "false",
 };
+// export const submitForm = createAsyncThunk(
+//   "/ob2AphM6msSxz711poFhGu",
+//   async (thunkAPI, data) => {
+//     // const { name, email, phone, message } = initialState;
+//     // const data = { name, email, phone, message };
+//     try {
+//       const resp = await postForm.get("/ob2AphM6msSxz711poFhGu", data, {
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       });
+//       thunkAPI.dispatch(clearForm());
+//       console.log(resp);
 
+//       return resp.message;
+//     } catch (error) {}
+//   }
+// );
 export const submitForm = async (data) => {
-  fetch("https://api.sheetmonkey.io/forms/vB1pUYCBvUqnSarEvAgsd6", {
+  fetch("https://api.sheetmonkey.io/form/ob2AphM6msSxz711poFhGu", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +54,14 @@ const appSlice = createSlice({
     handleFormChange: (state, { payload }) => {
       state[payload.name] = payload.value;
     },
+    clearForm: (state) => {
+      state.name = "";
+      state.email = "";
+      state.phone = "";
+      state.message = "";
+    },
   },
 });
-export const { openNavbar, closeNavbar, handleFormChange } = appSlice.actions;
+export const { openNavbar, closeNavbar, handleFormChange, clearForm } =
+  appSlice.actions;
 export default appSlice.reducer;
