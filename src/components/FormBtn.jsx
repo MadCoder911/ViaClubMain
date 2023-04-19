@@ -12,6 +12,7 @@ const FormBtn = () => {
       toast.error("Please fill all input fields...");
       return;
     }
+    // { name, email, phone, message }
     submitForm({ name, email, phone, message });
     dispatch(clearForm());
     toast.success("Form has been submitted...");

@@ -11,20 +11,20 @@ const initialState = {
   isLoading: "false",
 };
 // export const submitForm = createAsyncThunk(
-//   "/ob2AphM6msSxz711poFhGu",
-//   async (thunkAPI, data) => {
-//     // const { name, email, phone, message } = initialState;
-//     // const data = { name, email, phone, message };
+//   "app/submitForm",
+//   async (thunkAPI) => {
+//     const { name, email, phone, message } = initialState;
+//     const data = { name, email, phone, message };
 //     try {
-//       const resp = await postForm.get("/ob2AphM6msSxz711poFhGu", data, {
+//       const resp = await axios({
+//         url: "https://api.sheetmonkey.io/form/ob2AphM6msSxz711poFhGu",
+//         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
 //         },
-//         body: JSON.stringify(data),
+//         data: JSON.stringify(data),
 //       });
-//       thunkAPI.dispatch(clearForm());
 //       console.log(resp);
-
 //       return resp.message;
 //     } catch (error) {}
 //   }
@@ -37,6 +37,7 @@ export const submitForm = async (data) => {
     },
     body: JSON.stringify(data),
   }).then((result) => {
+    console.log(result);
     return result.message;
   });
 };
