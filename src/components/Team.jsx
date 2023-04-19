@@ -2,32 +2,29 @@ import styled from "styled-components";
 import TeamImg from "./TeamImg";
 import TeamInfo from "./TeamInfo";
 const Team = ({ name, jobDescription, jobSpecs, grayBg, order, img }) => {
-  //   const firstText = name.split(" ");
-  //   const lastWord = firstText.pop();
-  //   const needed = firstText.join(" ");
-  if (order === "icon-right") {
-    return (
-      <div className={grayBg && "gray-bg"}>
-        <Wrapper className="container">
-          <TeamInfo
-            name={name}
-            jobDescription={jobDescription}
-            jobSpecs={jobSpecs}
-          />
-          <TeamImg img={img} />
-        </Wrapper>
-      </div>
-    );
-  }
   return (
     <div className={grayBg && "gray-bg"}>
       <Wrapper className="container">
-        <TeamImg img={img} />
-        <TeamInfo
-          name={name}
-          jobDescription={jobDescription}
-          jobSpecs={jobSpecs}
-        />
+        {order === "icon-right" && (
+          <>
+            <TeamInfo
+              name={name}
+              jobDescription={jobDescription}
+              jobSpecs={jobSpecs}
+            />
+            <TeamImg img={img} />
+          </>
+        )}
+        {order === "icon-left" && (
+          <>
+            <TeamImg img={img} />
+            <TeamInfo
+              name={name}
+              jobDescription={jobDescription}
+              jobSpecs={jobSpecs}
+            />
+          </>
+        )}
       </Wrapper>
     </div>
   );
@@ -53,6 +50,7 @@ const Wrapper = styled.section`
   }
   .info ul {
     list-style: disc;
+    padding-left: 30px;
   }
   .title h1 {
     font-size: 42px;
@@ -61,5 +59,17 @@ const Wrapper = styled.section`
   img {
     max-width: 100%;
     margin-top: 120px;
+  }
+  @media (max-width: 1000px) {
+    display: block;
+    .info {
+      width: 100%;
+      .title {
+        text-align: center;
+      }
+    }
+    img {
+      display: none;
+    }
   }
 `;

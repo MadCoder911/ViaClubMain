@@ -3,17 +3,24 @@ import landingImage from "../assets/Images/teams-page-image.jpg";
 import { teamsData } from "../data";
 import TeamsTitle from "../components/TeamsTitle";
 import Team from "../components/Team";
+import { motion } from "framer-motion";
+import { variantsCont } from "../utils";
 const Teams = () => {
   return (
     <>
-      <LandingComponent text={"The teams"} img={landingImage} btn={false} />
+      <LandingComponent text={"THE TEAMS"} img={landingImage} btn={false} />
       {teamsData.map((team, id) => {
         return (
-          <>
+          <motion.div
+            variants={variantsCont}
+            initial="offscreen"
+            whileInView="show"
+            viewport={{ once: true, amount: 0 }}
+          >
             <TeamsTitle text={team.title} grayBg={team.grayBg} key={id} />
             <Team {...team.team1} order={"icon-right"} key={id + 1} />
             <Team {...team.team2} order={"icon-left"} key={id + 2} />
-          </>
+          </motion.div>
         );
       })}
     </>

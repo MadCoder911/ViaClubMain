@@ -1,5 +1,4 @@
 const TeamImg = ({ img }) => {
-  console.log(img);
   return (
     <div className="image">
       {" "}
