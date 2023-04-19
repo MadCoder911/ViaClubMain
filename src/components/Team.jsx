@@ -75,6 +75,9 @@ const Wrapper = styled.section`
       .title {
         text-align: center;
       }
+      ul {
+        width: 90%;
+      }
     }
     img {
       display: none;
