@@ -1,9 +1,17 @@
 import styled from "styled-components";
 import TeamImg from "./TeamImg";
 import TeamInfo from "./TeamInfo";
+import { motion } from "framer-motion";
+import { variantsCont } from "../utils";
 const Team = ({ name, jobDescription, jobSpecs, grayBg, order, img }) => {
   return (
-    <div className={grayBg && "gray-bg"}>
+    <motion.div
+      className={grayBg && "gray-bg"}
+      variants={variantsCont}
+      initial="offscreen"
+      whileInView="show"
+      viewport={{ once: true, amount: 0 }}
+    >
       <Wrapper className="container">
         {order === "icon-right" && (
           <>
@@ -26,7 +34,7 @@ const Team = ({ name, jobDescription, jobSpecs, grayBg, order, img }) => {
           </>
         )}
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
 export default Team;

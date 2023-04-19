@@ -1,16 +1,24 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { variantsCont } from "../utils";
 const TeamsTitle = ({ text, grayBg }) => {
   const firstText = text.split(" ");
   const lastWord = firstText.pop();
   const needed = firstText.join(" ");
   return (
-    <div className={grayBg && "gray-bg"}>
+    <motion.div
+      className={grayBg && "gray-bg"}
+      variants={variantsCont}
+      initial="offscreen"
+      whileInView="show"
+      viewport={{ once: true, amount: 0 }}
+    >
       <Wrapper className="section container">
         <h1>
           {needed} <span className="red">{lastWord}</span>
         </h1>
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
 export default TeamsTitle;

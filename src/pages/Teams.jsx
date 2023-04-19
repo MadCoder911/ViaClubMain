@@ -11,16 +11,11 @@ const Teams = () => {
       <LandingComponent text={"THE TEAMS"} img={landingImage} btn={false} />
       {teamsData.map((team, id) => {
         return (
-          <motion.div
-            variants={variantsCont}
-            initial="offscreen"
-            whileInView="show"
-            viewport={{ once: true, amount: 0 }}
-          >
+          <>
             <TeamsTitle text={team.title} grayBg={team.grayBg} key={id} />
             <Team {...team.team1} order={"icon-right"} key={id + 1} />
             <Team {...team.team2} order={"icon-left"} key={id + 2} />
-          </motion.div>
+          </>
         );
       })}
     </>

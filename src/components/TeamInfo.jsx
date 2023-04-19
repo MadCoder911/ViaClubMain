@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
+import { children } from "../utils";
 const TeamInfo = ({ name, jobDescription, jobSpecs }) => {
   const firstText = name.split(" ");
   const lastWord = firstText.pop();
   const needed = firstText.join(" ");
   return (
-    <div className="info">
+    <motion.div className="info" variants={children}>
       <div className="title">
         <h1>
           {needed} <span className="red">{lastWord}:</span>
@@ -17,7 +19,7 @@ const TeamInfo = ({ name, jobDescription, jobSpecs }) => {
           return <li key={id}>{desc}</li>;
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 export default TeamInfo;
