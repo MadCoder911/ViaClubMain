@@ -69,7 +69,7 @@ const Wrapper = styled.section`
     margin-top: 120px;
   }
   @media (max-width: 1000px) {
-    display: block;
+    justify-content: center;
     .info {
       width: 100%;
       .title {
