@@ -79,11 +79,11 @@ const NavWrapper = styled.nav`
   position: fixed;
   color: white;
   top: 0;
-
   z-index: 10;
   background-image: linear-gradient(to bottom right, #ef3d2c, #9f2a1f);
   width: 100%;
   height: 100vh;
+  padding-top: 20px;
   .top {
     display: flex;
     justify-content: space-between;
@@ -91,8 +91,8 @@ const NavWrapper = styled.nav`
       background-color: transparent;
       border: none;
       color: white;
-      font-size: 28px;
-      padding-top: 20px;
+      font-size: 35px;
+      padding: 0;
     }
   }
   li {
@@ -101,7 +101,6 @@ const NavWrapper = styled.nav`
   }
   img {
     width: 100px;
-    padding-top: 20px;
   }
   transition: all ease-in-out 0.5s;
   .icons {
@@ -144,7 +143,7 @@ const Wrapper = styled.nav`
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 28px;
+    font-size: 40px;
     padding: 0px;
   }
 

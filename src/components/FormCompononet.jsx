@@ -37,7 +37,7 @@ const FormCompononet = () => {
             type={"text"}
             name={"phone"}
             value={phone}
-            placeholder={"ex: 12345678901"}
+            placeholder={"ex: 01234567891"}
             handleChange={handleInput}
           />
           <FormRow
