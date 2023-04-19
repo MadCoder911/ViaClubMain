@@ -134,7 +134,7 @@ export const teamsData = [
     title: "Branding Directory",
     grayBg: "",
     team1: {
-      name: "Scoail Media",
+      name: "Social Media",
       jobDescription:
         "The Social Media team is responsible for the entity's online image, providing planned contentstrategies, content creation, creative online campaigns, platform management, and platformanalysis.They also work on all graphics designing for social media posts, media products, and merch alsomotion graphics and montaging footage.",
       jobSpecs: [
